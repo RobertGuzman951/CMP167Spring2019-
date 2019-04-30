@@ -1,30 +1,30 @@
 
 public class School {
 	public String name;
-	public int  classroom;
+	public String  classroom;
 	public String location;
-	public String publicschool;
-	public String privateschool;
-	public String open;
+	public boolean open;
+
+	public School() {
+		this.name = "";
+		this.classroom = "";
+		this.location = "";
+	}
+public void name(){
+
 }
 
-public void publicschool(){
-	if (public school);
-	System.out.println("Went to public school");
+public void classroom() {
 }
-
-public void privateschool(){
-	if (privateschool);
-	System.out.println("Went to private school");
-}
-
 
 public void location(){
-	System.out.println(location);
+	System.out.println("location is: " + location );
 }
 
 public void open(){
-	
+	}
 
-}	
+public void close() {
+	
+}
 }

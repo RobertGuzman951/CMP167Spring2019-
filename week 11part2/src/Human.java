@@ -21,6 +21,16 @@ public class Human {
 	 this.hunger = 5.0;
 	 this.vehicles = new Vehicle[100];
  }
+ public Human(String name, int age) {//overloaded constructor
+	 this.age = age;
+	 this.name = name;
+	 this.wealth = 0.0;
+	 this.hasVehicle = false;
+	 this.food = 5;
+	 this.hunger = 5.0;
+	 this.vehicles = new Vehicle[100];
+ }
+ 
  public int numOfVehicles() {
 	 int total = 0;
 	 for (int i=0; i<vehicles.length; i++) {
