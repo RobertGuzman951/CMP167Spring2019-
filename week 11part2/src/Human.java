@@ -4,13 +4,15 @@
  * 
  */
 public class Human {
- public int age;
- public int food;
- public double wealth;
- public double hunger;
- public String  name;
- public boolean hasVehicle;
- public Vehicle[] vehicles;//array of vehicles
+	//we have achieved encapsulation by having our instance variable private
+	//then provided setters and getters to provide access
+ private int age;
+ private int food;
+ private double wealth;
+ private double hunger;
+ private String  name;
+ private boolean hasVehicle;
+ private Vehicle[] vehicles;//array of vehicles
  
  public Human() {//Constructor new human();	
 	 this.age = 0;
@@ -30,6 +32,35 @@ public class Human {
 	 this.hunger = 5.0;
 	 this.vehicles = new Vehicle[100];
  }
+ //getter methods:returns value of instance variable
+ public int getAge() {
+	 return this.age;
+ }
+ public String getName() {
+	 return this.name;
+ }
+ public double getHunger() {
+	 return this.hunger;
+ }
+ //setter:changes the value of instance variable
+ public void setAge(int age) {
+	 this.age = age;
+ }
+ 
+ public void setName(String name) {
+	 this.name = name;
+ }
+ public void setHunger(double hunger) {
+	 this.hunger = hunger;
+ }
+
+ //tostring that provides a string representation of the object 
+ @Override
+ public String toString() {
+	 return "Human: [ name: " + getName() + ", age:"+getAge()+" , wealth: "+ this.wealth+"$]";
+ }
+ 
+ 
  
  public int numOfVehicles() {
 	 int total = 0;
@@ -52,7 +83,9 @@ public class Human {
 	
 	else System.out.println("Not enough food, please buy more food");
 }
-
+public void eat(int food) {//overloaded method
+	hunger -= food/4.5;
+}
 public void grow(){
 	age++;
 }
